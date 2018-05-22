@@ -43,9 +43,9 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'forge'), // `message-board` と言うデータベース名で作成して環境変数から読み込み
+            'username' => env('DB_USERNAME', 'forge'), // 今まで使用してきたユーザー名
+            'password' => env('DB_PASSWORD', ''), // 今まで使用してきたパスワード
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
