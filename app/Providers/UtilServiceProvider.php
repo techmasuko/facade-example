@@ -39,6 +39,13 @@ class UtilServiceProvider extends ServiceProvider
          * ServiceProviderで抽象->実装への変換を行う
          */
         // $this->app->bind(SenderInterface::class, \App\Services\SlackSender::class);
+        /**
+         * 3Aと同じ
+         */
+        // $this->app->bind(SenderInterface::class, function () {
+        //     dump('SenderInterfaceに対する依存の解決が必要ない場合は表示されない')
+        //     return new \App\Services\SlackSender;
+        // });
         
         /**
          * レベル3-B
@@ -58,10 +65,9 @@ class UtilServiceProvider extends ServiceProvider
          * レベル4
          * 
          * Facadesを利用するために必要
-         * App\Facades\Messengerはmessageという名前でコンテナへと問い合わせ
+         * App\Facades\Messengerはmessengerという名前でコンテナへと問い合わせ
          * コンテナは必要に応じてプロバイダからインスタンスを生成する
          */
-        /* Facadesを利用するために必要 */
-        // $this->app->bind('message', Messenger::class);
+        // $this->app->bind('messenger', Messenger::class);
     }
 }

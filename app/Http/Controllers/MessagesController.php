@@ -23,7 +23,7 @@ class MessagesController extends Controller
      * メソッドの引数にタイプヒントのクラスを指定すると
      * クラス情報を元に自動的にインスタンスが生成される
      * 
-     * Messengerクラスが依存しているクラス(Messenger)が
+     * MessegesControllerクラスが依存しているクラス(Messenger)が
      * わかりやす事もあり、使用頻度は多い
      * 
      * constructorだけでなく、indexやshowなどのメソッドでも同様の事が可能

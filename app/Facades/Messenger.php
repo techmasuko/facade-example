@@ -8,6 +8,6 @@ class Messenger extends Facade
     protected static function getFacadeAccessor()
     {
         dump('Call getFacadeAccesor');
-        return 'message';
+        return 'messenger';
     }
 }

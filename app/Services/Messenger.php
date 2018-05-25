@@ -17,7 +17,7 @@ class Messenger {
      * レベル1
      * 
      * メッセージの送信手段を直接インスタンス化
-     * BikeSenderに依存している状態
+     * SlackSenderに依存している状態
      */
     public function __construct() {
         $this->sender = new SlackSender;
@@ -29,14 +29,14 @@ class Messenger {
      * メッセージの送信手段を引数に指定(注入)
      * 外部から送信手段を注入できる状態
      * 外部から注入してあげないと必須項目が足りないためエラーが起きる
-     * タイプヒントを使用する場合は、BikeSender/MailSenderどちらかを選択しないといけない
+     * タイプヒントを使用する場合は、SlackSender/MailSenderどちらかを選択しないといけない
      */
     // public function __construct($sender) {
     //     $this->sender = new $sender;
     // }
 
     /**
-     * レベル3
+     * レベル3〜4
      * 
      * メッセージの送信手段を引数に指定(注入)
      * Interfaceを使用する事で、具体的な手段(Mail or Bike)をここで指定しなくて済む
